@@ -6,7 +6,7 @@
     "type": "offline"
   },
   "server": {
-    "ip": "encomnysmp.aternos.me:23273",
+    "ip": "encomnysmp.aternos.me",
     "port": 23273,
     "version": "",
     "try-creative": false
