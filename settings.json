@@ -9,7 +9,7 @@
     "ip": "Erdem1883.aternos.me",
     "port": 36167,
     "version": "",
-    "try-creative": false
+    "try-creative": true
   },
   "position": {
     "enabled": true,
