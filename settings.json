@@ -50,8 +50,8 @@
       "speed": 0
     },
     "look-around": {
-      "enabled": false,
-      "interval": 5777000
+      "enabled": true,
+      "interval": 5000
     },
     "random-jump": {
       "enabled": false,
