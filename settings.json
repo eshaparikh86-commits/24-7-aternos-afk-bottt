@@ -1,9 +1,9 @@
 {
   "name": "pozornik",
   "bot-account": {
-    "username": "pozornik,
+    "username": "pozornik",
     "password": "nigger",
-    "type": "offline"
+    "type": "online"
   },
   "server": {
     "ip": "RPGsurvival.aternos.me",
