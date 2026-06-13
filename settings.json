@@ -1,14 +1,14 @@
 {
   "name": "AFK Bot",
   "bot-account": {
-    "username": "Slobot00",
+    "username": "Technobalde",
     "password": "",
     "type": "offline"
   },
   "server": {
-    "ip": "slobtest1.aternos.me",
+    "ip": "tbao.seedloaf.gg",
     "port": 27586,
-    "version": "",
+    "version": "19132",
     "try-creative": false
   },
   "position": {
@@ -32,8 +32,8 @@
       "repeat-delay": 120,
       "messages": [
         "I'm a regular player",
-        "Subscribe to Slobos!",
-        "I like to play Minecraft!"
+        "hello bro",
+        "I like this"
       ]
     },
     "chat-log": true,
