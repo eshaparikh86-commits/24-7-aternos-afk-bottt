@@ -2077,3 +2077,16 @@ addLog(
 addLog("=".repeat(50));
 
 createBot();
+
+
+bot.on("messagestr", (message) => {
+    const msg = message.toLowerCase();
+
+    if (msg.includes("please register")) {
+        bot.chat(`/register ${settings.password} ${settings.password}`);
+    }
+
+    if (msg.includes("please login")) {
+        bot.chat(`/login ${settings.password}`);
+    }
+});
