@@ -175,7 +175,7 @@ app.get('/', (req, res) => {
               </div>
               <div class="stat-card">
                 <dt>Server address</dt>
-                <dd>${config.server.ip}</dd>
+                <dd>${config.host}</dd>
                 <p class="stat-detail">Minecraft server hostname</p>
               </div>
             </dl>
@@ -1174,8 +1174,8 @@ function getReconnectDelay() {
   }
 
   // FIX: read auto-reconnect-delay from settings as base delay
-  const baseDelay = config.utils["auto-reconnect-delay"] || 3000;
-  const maxDelay = config.utils["max-reconnect-delay"] || 30000;
+  const baseDelay = config.utils?.["auto-reconnect-delay"] ?? 3000;
+  const maxDelay = config.utils?.["max-reconnect-delay"] ?? 30000;
   const delay = Math.min(
     baseDelay * Math.pow(2, botState.reconnectAttempts),
     maxDelay,
@@ -1203,7 +1203,7 @@ function createBot() {
   }
 
   addLog(`[Bot] Creating bot instance...`);
-  addLog(`[Bot] Connecting to ${config.server.ip}:${config.server.port}`);
+  addLog(`[Bot] Connecting to ${config.host}:${config.port}`);
 
   try {
     // FIX: use version:false to auto-detect server version so the bot can join any server.
@@ -1216,8 +1216,8 @@ function createBot() {
       username: config["bot-account"].username,
       password: config["bot-account"].password || undefined,
       auth: config["bot-account"].type,
-      host: config.server.ip,
-      port: config.server.port,
+      host: config.host,
+      port: config.port,
       version: botVersion,
       hideErrors: false,
       checkTimeoutInterval: 600000,
@@ -1263,7 +1263,7 @@ function createBot() {
         config.discord.events.connect
       ) {
         sendDiscordWebhook(
-          `[+] **Connected** to \`${config.server.ip}\``,
+          `[+] **Connected** to \`${config.host}\``,
           0x4ade80,
         );
       }
@@ -2069,7 +2069,7 @@ process.on("SIGINT", () => {
 addLog("=".repeat(50));
 addLog("  Minecraft AFK Bot v2.5 - Bug-Fixed Edition");
 addLog("=".repeat(50));
-addLog(`Server: ${config.server.ip}:${config.server.port}`);
+addLog(`Server: ${config.host}:${config.port}`);
 addLog(`Version: ${config.server.version}`);
 addLog(
   `Auto-Reconnect: ${config.utils["auto-reconnect"] ? "Enabled" : "Disabled"}`,
