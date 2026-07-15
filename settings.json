@@ -1,15 +1,18 @@
 {
-  "host": "INFINISM.aternos.me",
-  "port": 28183,
+  "server": {
+    "ip": "INFINISM.aternos.me",
+    "port": 28183,
+    "version": false
+  },
 
-  "username": "",
-  "password": "1029384756",
+  "account": {
+    "username": "AFKBOT",
+    "password": "1029384756"
+  },
 
-  "version": false,
-
-  "reconnect": {
-    "enabled": true,
-    "delay": 5000
+  "utils": {
+    "auto-reconnect-delay": 5000,
+    "max-reconnect-delay": 30000
   },
 
   "movement": {
